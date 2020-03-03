@@ -1,65 +1,112 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.9.3/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.9.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.9.3/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.9.3/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.9.3/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lawn Care Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="blueberry.css" />
+<link href="stylesheet.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="jquery.blueberry.js"></script>
+<script>
+    $(window).load(function() {
+     $('.blueberry').blueberry();
+    });
     </script>
-  </body>
+</head>
+
+<body>
+    <header>
+        <a href="#" id="logo"></a>
+        <nav>
+            <a href="#" id="menu-icon"></a>
+            <ul>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="doc">
+        <div id="content">
+            <div class="blueberry">
+                <ul class="slides">
+                    <li><img src="https://production-next-images-cdn.thumbtack.com/i/302055615209242718/width/640.jpeg"></li>
+                    <li><img src="https://bluetreelandscaping.com/wp-content/uploads/2019/06/lawn-care-featured.jpg"></li>
+                    <li><img src="https://academy.getjobber.com/wp-content/uploads/2017/05/LawnCareOperations-1.jpg"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section>
+        <img src="https://i.imgur.com/WTkRcfX.png" />
+        <h1>The Best Lawn Care Around!</h1>
+        <p>With over 5 trillion lawns cut, our service is some of the best talent for your lawn care needs. Reach out today so we can help you meet your lawn goals as quickly as possible!</p>
+    </section>
+
+    <section>
+        <img src="https://i.imgur.com/HAzDsCG.png" />
+        <h1>Local and Convenient!</h1>
+        <p>Our lawn specialist is local, and responsive-- ready to come to you when it suits your needs.</p>
+    </section>
+
+    <section>
+        <img src="https://i.imgur.com/yPlJQWq.png" />
+        <h1>100% Satisfaction Guarantee</h1>
+        <p>To show how confident we are in our services, if you aren't 100% happy with our work, we will give you a full refund, no questions asked.</p>
+    </section>
+    <div class="clear"></div>
+    <article>
+        <img src="https://hometone.com/wp-content/uploads/2019/04/Lawn-Care-Provider.jpg" />
+    </article>
+    <aside>
+        <h2>Hours of Availability:</h2>
+        <ul class="hours">
+            <li><h3>Monday: 7am - 6pm</h3></li>
+            <li><h3>Tuesday: 8am - 6pm</h3></li>
+            <li><h3>Wednesday: 6am - 4pm</h3></li>
+            <li><h3>Thursday: 7am - 4pm</h3></li>
+            <li><h3>Friday: 7am - 6pm</h3></li>
+        </ul>
+    </aside>
+    <div class="clear"></div>
+        <section>
+            <h1>Grass Mowing</h1>
+            <img src="https://d1nzrxmu7plstm.cloudfront.net/wp-content/uploads/2016/03/Lawn-Mower.jpg" />
+            <p>With our heavy-duty riding mower, your lawn will be even, short, and healthy.</p>
+        </section>
+        <section>
+            <h1>Hedge Trimming</h1>
+            <img src="https://s3.amazonaws.com/greenpal-production/posts/header_images/000/000/139/original/Image_1.jpg?1570548614" />
+            <p>Unruly bushes can be hard to handle-- let us take care of that for you with the proper tools!</p>
+        </section>
+        <section>
+            <h1>Branch Removal</h1>
+            <img src="https://www.yonkerstreepros.com/uploads/1/2/4/0/124081117/published/branch-trimming-service-yonkers-ny_1.jpeg?1548344965" />
+            <p>Taking care of overhanging branches can be for visual, or safety reasons. Whatever your reasoning, we can handle it.</p>
+        </section>
+        <footer>
+            <section>
+                <h3><b>Joe's Lawn Care</b></h3>
+                <p><b>412.555.5555</b><br>
+                Houston TX<br>
+                lawncare@lawncare.com</p>
+            </section>
+            <section>
+                <h3>Connect With Us</h3>
+                <ul class="social">
+                    <li><a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png"></a></li> <!--facebook URL-->
+                    <li><a href="#"><img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/twitter_circle_color-512.png"></a></li> <!--twitter URL-->
+                    <li><a href="#"><img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/38-instagram-512.png"></a></li> <!--instagram URL-->
+                </ul>
+            </section>
+            <section>
+                <img src="https://i.imgur.com/tfpip60.png" />
+            </section>
+        </footer>
+        <footer class="footer-second">
+            <p>© Copyright - Joe's Lawn Care, 2020</p>
+        </footer>
+</body>
 </html>
